@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.Queue;
 import java.util.Set;
 
 /**
@@ -49,7 +50,7 @@ public class Graph {
          visited.add(s.id);
          if(s == d) return true;
          for(Node child : s.adjacent){
-             if(hasPathDfs(s, d, visited)){
+             if(hasPathDfs(child, d, visited)){
                  return true;
              }
          }
@@ -61,7 +62,7 @@ public class Graph {
      }
      
      private boolean hasPathBfs(Node s, Node d){
-      LinkedList<Node> nextToVisit = new LinkedList<>();
+      Queue<Node> nextToVisit = new LinkedList<>();
       Set<Integer>visited = new HashSet();
         nextToVisit.add(s);
         while(!nextToVisit.isEmpty()){
@@ -70,9 +71,7 @@ public class Graph {
              return true;
             }
             if(visited.contains(node.id)) continue;
-            
             visited.add(node.id);
-            
             for(Node child:node.adjacent){
              nextToVisit.add(child);
             }

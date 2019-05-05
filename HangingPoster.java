@@ -5,7 +5,6 @@
  */
 package hackerrank;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -33,7 +32,7 @@ public class HangingPoster {
                   }
               }
           }
-      return (int)res;
+      return (int)Math.ceil(res);
     }
 
     

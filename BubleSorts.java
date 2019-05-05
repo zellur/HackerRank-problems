@@ -5,6 +5,8 @@
  */
 package hackerrank;
 
+
+import TreeProblems.InvertTree;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,15 +30,7 @@ public class BubleSorts {
      */
     public static void main(String[] args) throws InterruptedException {
         
-        List<Integer>p = new ArrayList<>();
-        List<Integer>w = new ArrayList<>();
-        p.add(4);
-        p.add(4);
-        
-        w.add(5);
-         w.add(5);
-       System.out.println(HangingPoster.solve(5, w, p));
-    
+        System.out.println(Panagram.getPanagram("We promptly judged antique ivory buckles for the prize"));
     }
     
      
